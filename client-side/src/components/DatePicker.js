@@ -1,0 +1,74 @@
+import React, { useState } from "react";
+
+const DatePicker = () => {
+  const [checkInDate, setCheckInDate] = useState("");
+  const [checkOutDate, setCheckOutDate] = useState("");
+
+  const handleCheckInChange = (e) => {
+    const newCheckInDate = e.target.value;
+    setCheckInDate(newCheckInDate);
+
+    if (newCheckInDate > checkOutDate) {
+      setCheckOutDate("");
+    }
+  };
+
+  const handleCheckOutChange = (e) => {
+    const newCheckOutDate = e.target.value;
+    if (newCheckOutDate >= checkInDate) {
+      setCheckOutDate(newCheckOutDate);
+    } else {
+      alert("Check-out date must be on or after check-in date.");
+    }
+  };
+
+  return (
+    <div className="date-picker" style={{ width: "275px" }}>
+      <div className="mb-3">
+        <label htmlFor="check-in-date" className="form-label">
+          <p
+            style={{ backgroundColor: "blue", padding: "5px", color: "white" }}
+          >
+            Check-in date::
+          </p>
+        </label>
+        <input
+          type="date"
+          id="check-in-date"
+          className="form-control"
+          value={checkInDate}
+          onChange={handleCheckInChange}
+        />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="check-out-date" className="form-label">
+          <p
+            style={{ backgroundColor: "blue", padding: "5px", color: "white" }}
+          >
+            Check-out date:
+          </p>
+        </label>
+        <input
+          type="date"
+          id="check-out-date"
+          className="form-control"
+          value={checkOutDate}
+          onChange={handleCheckOutChange}
+          min={checkInDate}
+        />
+      </div>
+
+      <div className="mt-2">
+        <p style={{ backgroundColor: "blue", padding: "5px", color: "white" }}>
+          Selected Check-in Date: {checkInDate}
+        </p>
+        <p style={{ backgroundColor: "blue", padding: "5px", color: "white" }}>
+          Selected Check-out Date: {checkOutDate}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default DatePicker;

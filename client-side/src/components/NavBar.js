@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap styles
+import "bootstrap/dist/css/bootstrap.min.css"; 
 
 function NavBar() {
   return (
@@ -8,21 +8,19 @@ function NavBar() {
       style={{
         padding: "20px 30px",
         fontSize: "1.2rem",
-        backgroundColor: "rgba(0, 0, 0, 0.7)", // Dark opaque background
+        backgroundColor: "rgba(0, 0, 0, 0.7)", 
       }}
     >
       <div className="container-fluid">
         <div className="row w-100">
-          {/* Logo and company name column */}
           <div className="col-lg-4 d-flex align-items-center">
-            {/* Logo */}
             <a className="navbar-brand" href="#">
               <img
                 src="../assets/images/logo.jpg"
                 alt="Logo"
                 style={{
-                  width: "70px", // Logo width
-                  height: "70px", // Logo height
+                  width: "70px",
+                  height: "70px",
                 }}
               />
             </a>
@@ -70,7 +68,6 @@ function NavBar() {
             </div>
           </div>
 
-          {/* Right column with phone number and button */}
           <div className="col-lg-4 d-flex align-items-center justify-content-end">
             <span
               className="me-3 poppins-semibold text-white"

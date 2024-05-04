@@ -1,5 +1,6 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import "bootstrap/dist/css/bootstrap.min.css";
+import DatePicker from "./DatePicker";
 
 function HeroSection() {
   return (
@@ -14,14 +15,30 @@ function HeroSection() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        position: "relative",
+        paddingTop: "70px", 
       }}
     >
+      <div
+        className="date-picker-container"
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          paddingTop: "10px",
+          marginTop: "120px",
+          padding: "10px",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+        }}
+      >
+        <DatePicker />
+      </div>
       <h1
         className="text-white display-4"
         style={{
           fontFamily: "sans-serif",
-          backgroundColor: "rgba(0, 0, 0, 0.7)", 
-          padding: "10px 20px", 
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+          padding: "10px 20px",
         }}
       >
         Welcome to Our GuestHouse
@@ -30,7 +47,7 @@ function HeroSection() {
         className="lead text-white"
         style={{
           fontFamily: "sans-serif",
-          backgroundColor: "rgba(0, 0, 0, 0.7)", 
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
           padding: "10px 20px",
         }}
       >
