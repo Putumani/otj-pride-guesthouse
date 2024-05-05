@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "./DatePicker";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function NavBar({ toggleDatePicker }) {
+function NavBar() {
+  const [isDatePickerVisible, setIsDatePickerVisible] = useState(false);
+
+  const toggleDatePickerVisibility = () => {
+    setIsDatePickerVisible((prevVisibility) => !prevVisibility);
+  };
+
   return (
     <nav
       className="navbar navbar-expand-lg fixed-top"
@@ -49,8 +56,8 @@ function NavBar({ toggleDatePicker }) {
                     Home
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link poppins-regular text-white" href="#">
+                <li class="nav-item">
+                  <a class="nav-link poppins-regular text-white" href="#">
                     Rooms
                   </a>
                 </li>
@@ -79,12 +86,30 @@ function NavBar({ toggleDatePicker }) {
               className="btn btn-warning p-2 rounded-0 text-black"
               type="button"
               style={{ fontSize: "1.2rem" }}
-              onClick={toggleDatePicker} 
+              onClick={toggleDatePickerVisibility}
             >
               Book Now
             </button>
           </div>
         </div>
+
+        {/* DatePicker component */}
+        {isDatePickerVisible && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              paddingTop: "10px",
+              marginTop: "120px",
+              padding: "10px",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+              zIndex: 1000,
+            }}
+          >
+            <DatePicker />
+          </div>
+        )}
       </div>
     </nav>
   );

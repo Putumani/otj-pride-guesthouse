@@ -1,0 +1,39 @@
+.font-slim {
+    font-weight: 400;
+}
+
+.increased-font-size {
+    font-size: 1.2rem;
+}
+
+.increased-font-size {
+    font-size: 1.2rem;
+}
+
+.top-slim-bar {
+    width: 5%;
+    height: 2px;
+    margin: 10px auto;
+}
+
+.font-slim {
+    font-weight: 300;
+}
+
+.increased-font-size {
+    font-size: 1.2rem;
+}
+
+.slim-bar {
+    width: 5%;
+    height: 2px;
+    margin: 10px auto;
+}
+
+.margin_60_35 {
+    margin: 60px 35px;
+}
+
+.gray-paragraph {
+    color: #6c757d;
+}
