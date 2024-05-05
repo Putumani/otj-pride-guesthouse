@@ -22,6 +22,7 @@ function HeroSection() {
         backgroundImage: "url(../assets/images/front_view.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat", // Add this line
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -68,7 +69,7 @@ function HeroSection() {
         Experience luxury and comfort
       </p>
       <button
-        className="btn btn-warning p-2 rounded-0"
+        className="btn btn-warning"
         style={{ fontFamily: "sans-serif" }}
       >
         Learn More
@@ -78,3 +79,4 @@ function HeroSection() {
 }
 
 export default HeroSection;
+

@@ -7,7 +7,6 @@ const DatePicker = ({ className }) => {
   const handleCheckInChange = (e) => {
     const newCheckInDate = e.target.value;
     setCheckInDate(newCheckInDate);
-    // Reset the check-out date if it's earlier than the new check-in date
     if (newCheckInDate > checkOutDate) {
       setCheckOutDate("");
     }
@@ -22,7 +21,6 @@ const DatePicker = ({ className }) => {
     }
   };
 
-  // Determine whether the submit button should be visible
   const isSubmitButtonVisible = checkInDate !== "" && checkOutDate !== "";
 
   return (
@@ -77,7 +75,6 @@ const DatePicker = ({ className }) => {
         </p>
       </div>
 
-      {/* Render the submit button only when both dates are selected */}
       {isSubmitButtonVisible && (
         <button
           className="btn btn-success mt-3"

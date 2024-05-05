@@ -73,10 +73,10 @@ function NavBar({ toggleDatePicker }) {
               className="me-3 poppins-semibold text-white"
               style={{ fontSize: "1.2rem" }}
             >
-              Call us: +123-456-7890
+              Call us: +27-682-7154
             </span>
             <button
-              className="btn btn-warning p-2 rounded-0 poppins-regular text-black"
+              className="btn btn-warning text-black"
               type="button"
               style={{ fontSize: "1.2rem" }}
               onClick={toggleDatePicker} 
