@@ -22,7 +22,7 @@ function HeroSection() {
         backgroundImage: "url(../assets/images/front_view.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat", // Add this line
+        backgroundRepeat: "no-repeat", 
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
