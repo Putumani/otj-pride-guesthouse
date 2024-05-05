@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "./DatePicker";
 import NavBar from "./NavBar";
+import "../index.css"; 
 
 function HeroSection() {
   const [isDatePickerVisible, setIsDatePickerVisible] = useState(false);
@@ -8,6 +9,10 @@ function HeroSection() {
   const toggleDatePickerVisibility = () => {
     setIsDatePickerVisible((prevVisibility) => !prevVisibility);
   };
+
+  const datePickerClassName = isDatePickerVisible
+    ? "date-picker-visible"
+    : "hidden date-picker-slide-in";
 
   return (
     <div
@@ -27,22 +32,21 @@ function HeroSection() {
     >
       <NavBar toggleDatePicker={toggleDatePickerVisibility} />
 
-      {isDatePickerVisible && (
-        <div
-          className="date-picker-container"
-          style={{
-            position: "absolute",
-            top: 0,
-            right: 0,
-            paddingTop: "10px",
-            marginTop: "120px",
-            padding: "10px",
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-          }}
-        >
-          <DatePicker />
-        </div>
-      )}
+      <div
+        className={`date-picker-container ${datePickerClassName}`}
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          paddingTop: "10px",
+          marginTop: "120px",
+          padding: "10px",
+          backgroundColor: "rgba(0, 0, 0, 0.7)",
+        }}
+      >
+        <DatePicker />
+      </div>
+
       <h1
         className="text-white display-4"
         style={{

@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Define the hidden state for the date picker */
+.hidden {
+  display: none;
+}
+
+/* Define the visible state for the date picker with a slide-in effect */
+.date-picker-slide-in {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+
+.date-picker-visible {
+  transform: translateX(0);
+}

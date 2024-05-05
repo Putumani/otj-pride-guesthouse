@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const DatePicker = () => {
+const DatePicker = ({ className }) => {
   const [checkInDate, setCheckInDate] = useState("");
   const [checkOutDate, setCheckOutDate] = useState("");
 
   const handleCheckInChange = (e) => {
     const newCheckInDate = e.target.value;
     setCheckInDate(newCheckInDate);
-
+    // Reset the check-out date if it's earlier than the new check-in date
     if (newCheckInDate > checkOutDate) {
       setCheckOutDate("");
     }
@@ -22,8 +22,11 @@ const DatePicker = () => {
     }
   };
 
+  // Determine whether the submit button should be visible
+  const isSubmitButtonVisible = checkInDate !== "" && checkOutDate !== "";
+
   return (
-    <div className="date-picker" style={{ width: "275px" }}>
+    <div className={`date-picker ${className}`} style={{ width: "275px" }}>
       <div className="mb-3">
         <label htmlFor="check-in-date" className="form-label">
           <p
@@ -48,11 +51,7 @@ const DatePicker = () => {
       <div className="mb-3">
         <label htmlFor="check-out-date" className="form-label">
           <p
-            style={{
-              backgroundColor: "blue",
-              padding: "5px",
-              color: "white",
-            }}
+            style={{ backgroundColor: "blue", padding: "5px", color: "white" }}
           >
             Check-out date:
           </p>
@@ -77,6 +76,17 @@ const DatePicker = () => {
           Selected Check-out Date: {checkOutDate}
         </p>
       </div>
+
+      {/* Render the submit button only when both dates are selected */}
+      {isSubmitButtonVisible && (
+        <button
+          className="btn btn-success mt-3"
+          style={{ width: "100%" }}
+          type="submit"
+        >
+          Submit
+        </button>
+      )}
     </div>
   );
 };
