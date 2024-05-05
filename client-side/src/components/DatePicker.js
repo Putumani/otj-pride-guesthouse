@@ -32,6 +32,7 @@ const DatePicker = ({ className }) => {
               backgroundColor: "#5397ef",
               padding: "5px",
               color: "white",
+              fontSize: "1rem",
             }}
           >
             Check-in date:
@@ -49,7 +50,12 @@ const DatePicker = ({ className }) => {
       <div className="mb-3">
         <label htmlFor="check-out-date" className="form-label">
           <p
-            style={{ backgroundColor: "blue", padding: "5px", color: "white" }}
+            style={{
+              backgroundColor: "blue",
+              padding: "5px",
+              color: "white",
+              fontSize: "1rem", 
+            }}
           >
             Check-out date:
           </p>
@@ -66,11 +72,23 @@ const DatePicker = ({ className }) => {
 
       <div className="mt-2">
         <p
-          style={{ backgroundColor: "#5397ef", padding: "5px", color: "white" }}
+          style={{
+            backgroundColor: "#5397ef",
+            padding: "5px",
+            color: "white",
+            fontSize: "1rem", 
+          }}
         >
           Selected Check-in Date: {checkInDate}
         </p>
-        <p style={{ backgroundColor: "blue", padding: "5px", color: "white" }}>
+        <p
+          style={{
+            backgroundColor: "blue",
+            padding: "5px",
+            color: "white",
+            fontSize: "1rem", 
+          }}
+        >
           Selected Check-out Date: {checkOutDate}
         </p>
       </div>
