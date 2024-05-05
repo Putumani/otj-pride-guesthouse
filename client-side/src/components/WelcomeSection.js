@@ -5,7 +5,7 @@ import "./WelcomeSection.css";
 const WelcomeSection = () => {
   return (
     <section className="welcome-section">
-      <div className="container margin_60_35 spacing-bottom">
+      <div className="container margin_20_20spacing-bottom">
         <h1 className="main_title text-danger d-block font-slim">
           <em></em>
           Welcome to OTJ Pride GuestHouse
@@ -18,38 +18,32 @@ const WelcomeSection = () => {
       <div className="row mt-4">
         <div className="col-md-6">
           <p className="gray-paragraph">
-            Experience luxury at our 4-star boutique guesthouse in the heart of
-            Newlands, Cape Town. Riversong is nestled along the Liesbeek River
-            and offers stunning views of Table Mountain.
+            Finding an ideal family-friendly guest house in Hazyview does not
+            have to be difficult. Welcome to OTJ Pride Guest House, a nice
+            option for travelers like you.
           </p>
           <p className="gray-paragraph">
-            Situated in the Southern Suburbs, Riversong is the perfect choice
-            for discerning business travelers or vacationers seeking more than
-            just a hotel room.
+            The rooms offer air conditioning, and getting online is possible, as
+            paid WiFi is available, allowing you to rest and refresh with ease.
           </p>
           <p className="gray-paragraph">
-            The guesthouse is just a short walk from Newlands Cricket and Rugby
-            Grounds, Cavendish Square Mall, Claremont CBD, Vineyard Hotel and
-            Conference Centre, S.A. Sports Science Institute and Gym, SA
-            Breweries, Dean Street (start of the Two Oceans Marathon), Virgin
-            Active Gym, and various restaurants and pubs in trendy Newlands
-            Village.
+            Travelers looking for delis can head to Meat & Coffee Co.
           </p>
         </div>
         <div className="col-md-6">
           <p className="gray-paragraph">
-            It's a 10-minute drive from the University of Cape Town, Belmont
-            Square Conference Centre, Kirstenbosch Gardens, Kelvin Grove Club,
-            Great Westerford, Baxter Theatre, leading hospitals, and schools.
+            OTJ Pride Guest House features room service. In addition, as a
+            valued OTJ Pride Guest House guest, you can enjoy a pool and an
+            on-site restaurant that are available on-site. Guests arriving by
+            vehicle have access to free parking.
           </p>
           <p className="gray-paragraph">
-            A 20-minute drive will take you to the airport, city center, Cape
-            Town International Convention Centre, V & A Waterfront, Soccer
-            Stadium, golf courses, wine farms, and beautiful beaches.
+            There is no shortage of things to do in the area: explore popular
+            historic sites such as Shangana Cultural Village.
           </p>
           <p className="gray-paragraph">
-            Riversong is less than a 10-minute walk from the Newlands rugby and
-            cricket stadiums and the start of the Two Oceans Marathon.
+            OTJ Pride Guest House looks forward to welcoming you on your visit
+            to Hazyview.
           </p>
         </div>
       </div>
