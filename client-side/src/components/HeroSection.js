@@ -1,8 +1,14 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from "react";
 import DatePicker from "./DatePicker";
+import NavBar from "./NavBar";
 
 function HeroSection() {
+  const [isDatePickerVisible, setIsDatePickerVisible] = useState(false);
+
+  const toggleDatePickerVisibility = () => {
+    setIsDatePickerVisible((prevVisibility) => !prevVisibility);
+  };
+
   return (
     <div
       className="hero-section"
@@ -16,23 +22,27 @@ function HeroSection() {
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-        paddingTop: "70px", 
+        paddingTop: "70px",
       }}
     >
-      <div
-        className="date-picker-container"
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          paddingTop: "10px",
-          marginTop: "120px",
-          padding: "10px",
-          backgroundColor: "rgba(0, 0, 0, 0.7)",
-        }}
-      >
-        <DatePicker />
-      </div>
+      <NavBar toggleDatePicker={toggleDatePickerVisibility} />
+
+      {isDatePickerVisible && (
+        <div
+          className="date-picker-container"
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            paddingTop: "10px",
+            marginTop: "120px",
+            padding: "10px",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+          }}
+        >
+          <DatePicker />
+        </div>
+      )}
       <h1
         className="text-white display-4"
         style={{
